@@ -6,7 +6,7 @@ function MobileSwiper(selector, configure) {
 
   this.queue = (function (len) {
     var i, arr = [];
-    console.log(this);
+    // console.log(this);
     for (i = 0; i < len; i++) {
       arr[i] = i;
     }
