@@ -65,4 +65,12 @@
 ```
 
 **具体可以查看：**
-[DEMO](链接)
+[DEMO](https://github.com/lian-xiao-xi/mobile-swiper/tree/master/dom)
+
+[仿QQ音乐app首页的轮播图](https://lian-xiao-xi.github.io/mobile-swiper/dom/swiper应用之仿QQ音乐app首页的轮播图.html)
+
+[仿魅族音乐app首页的轮播图](https://lian-xiao-xi.github.io/mobile-swiper/dom/swiper应用之仿魅族音乐app首页的轮播图.html)
+
+[分组显示](https://lian-xiao-xi.github.io/mobile-swiper/dom/swiper应用之分组显示.html)
+
+[旋转木马轮播效果](https://lian-xiao-xi.github.io/mobile-swiper/dom/swiper应用之旋转木马轮播效果.html)
