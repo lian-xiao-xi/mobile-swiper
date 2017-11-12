@@ -6,7 +6,6 @@ function MobileSwiper(selector, configure) {
 
   this.queue = (function (len) {
     var i, arr = [];
-    console.log(this);
     for (i = 0; i < len; i++) {
       arr[i] = i;
     }
@@ -59,9 +58,7 @@ function MobileSwiper(selector, configure) {
     }
   };
   var cutDots = (orientation) => {
-    // console.log(dotsContainer)
     var activeDot = dotsContainer.getElementsByClassName(configure.paginationActive)[0];
-    // console.log(activeDot)
     activeDot.classList.remove(configure.paginationActive);
     orientation === 'left' &&
       (activeDot.nextElementSibling != null ? (activeDot.nextElementSibling.classList.add(configure.paginationActive)) : (dotsContainer.firstElementChild.classList.add(configure.paginationActive)))
@@ -81,27 +78,18 @@ function MobileSwiper(selector, configure) {
       last = total - 1, // 最后一个索引
       virtual = new Array(total),
       collect = 0, // 提取数
-      odd = 1; // 
+      odd = 1; 
     console.log(queue);
 
     while (collect < configure.css.length && queue.length > 0) {
-      // console.log(collect,collect === last && odd === 2 && "right" === orientation,odd)
       virtual[odd === 1 ? queue.shift() : queue.pop()] = configure.css[collect === last && odd === 2 && "right" === orientation ? ++collect : collect++];
       odd = odd === 1 ? 2 : 1;
-      // console.log(collect)
     }
 
-    /*****-----调试用-------******/
-    // console.log(configure.css)
-    // for (var i = 0; i < this.virtual.length; i++) {
-    //   console.log('virtual' + i + ': ' + virtual[i])
-    // }
-    /*****-----调试用-------******/
 
     for (var i = 0; i < total; i++) {
       this.virtual[i] !== virtual[i] &&
         (this.virtual[i] = virtual[i], this.slides[i].style.cssText = this.virtual[i] || configure.defalutStyle)
-      // console.log('本次的this.virtual' + i + ': ' + this.virtual[i]);
     }
 
   };
@@ -117,7 +105,6 @@ function MobileSwiper(selector, configure) {
 
     if (this.slides.length > 0) {
       this.container.addEventListener('touchstart', touchstartHandle);
-      // this.container.addEventListener('touchend', touchendHandle);
       this.container.addEventListener('touchmove', touchmoveHandle);
     };
 
